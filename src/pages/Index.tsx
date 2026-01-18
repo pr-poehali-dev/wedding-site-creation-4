@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
@@ -30,11 +29,11 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-beige overflow-x-hidden">
-      <div className="max-w-md mx-auto px-4 py-8 space-y-6">
-        
-        <Card className="bg-dark-brown text-cream border-0 rounded-3xl overflow-hidden shadow-2xl">
-          <CardContent className="p-0">
+    <div className="min-h-screen bg-[#e8ddd0] overflow-x-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+          
+          <div className="bg-[#2a1f1a] text-[#f5ede4] rounded-3xl overflow-hidden shadow-2xl">
             <div className="p-8 text-center">
               <h1 className="font-cormorant text-4xl mb-1 tracking-wider">ИВАН</h1>
               <div className="text-2xl my-2">&</div>
@@ -48,57 +47,55 @@ const Index = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-          </CardContent>
-        </Card>
+          </div>
 
-        <div className="text-center text-brown px-4 py-6">
-          <p className="text-sm leading-relaxed">
-            Создам сайт-приглашение<br/>
-            на вашу свадьбу.<br/>
-            Для связи пишите<br/>
-            в telegram: @yana_sereda<br/>
-            inst: @seredayana_design
-          </p>
-        </div>
+          <div className="space-y-6">
+            <div className="text-center text-black px-4 py-6 bg-[#e8ddd0] rounded-3xl">
+              <p className="text-sm leading-relaxed">
+                Создам сайт-приглашение<br/>
+                на вашу свадьбу.<br/>
+                Для связи пишите<br/>
+                в telegram: @yana_sereda<br/>
+                inst: @seredayana_design
+              </p>
+            </div>
 
-        <Card className="bg-cream text-brown border-0 rounded-3xl shadow-2xl">
-          <CardContent className="p-8 text-center">
-            <h2 className="font-cormorant text-3xl mb-6 tracking-wider">ДОРОГИЕ ГОСТИ!</h2>
-            <p className="text-sm leading-relaxed mb-6">
-              Совсем скоро наступит день, который будет<br/>
-              для нас особенным - ДЕНЬ НАШЕЙ СВАДЬБЫ!<br/>
-              И, конечно, нам хочется разделить его с самыми<br/>
-              близкими нам людьми, поэтому приглашаем Вас<br/>
-              разделить с нами этот прекрасный праздник!
-            </p>
-            <div className="mt-8">
-              <p className="text-xs mb-4 tracking-wider">ИЮЛЬ 2025</p>
-              <div className="grid grid-cols-7 gap-2 text-xs mb-4">
-                <div className="font-semibold">ПН</div>
-                <div className="font-semibold">ВТ</div>
-                <div className="font-semibold">СР</div>
-                <div className="font-semibold">ЧТ</div>
-                <div className="font-semibold">ПТ</div>
-                <div className="font-semibold">СБ</div>
-                <div className="font-semibold">ВС</div>
-                {[...Array(2)].map((_, i) => <div key={`empty-${i}`}></div>)}
-                {[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22].map(day => (
-                  <div key={day} className="py-1">{day}</div>
-                ))}
-                <div className="py-1 relative">
-                  <div>23</div>
-                  <Icon name="Heart" className="w-4 h-4 absolute top-0 left-1/2 -translate-x-1/2 fill-brown" />
+            <div className="bg-[#f5ede4] text-black rounded-3xl shadow-2xl p-8 text-center">
+              <h2 className="font-cormorant text-3xl mb-6 tracking-wider">ДОРОГИЕ ГОСТИ!</h2>
+              <p className="text-sm leading-relaxed mb-6">
+                Совсем скоро наступит день, который будет<br/>
+                для нас особенным - ДЕНЬ НАШЕЙ СВАДЬБЫ!<br/>
+                И, конечно, нам хочется разделить его с самыми<br/>
+                близкими нам людьми, поэтому приглашаем Вас<br/>
+                разделить с нами этот прекрасный праздник!
+              </p>
+              <div className="mt-8">
+                <p className="text-xs mb-4 tracking-wider">ИЮЛЬ 2025</p>
+                <div className="grid grid-cols-7 gap-2 text-xs mb-4">
+                  <div className="font-semibold">ПН</div>
+                  <div className="font-semibold">ВТ</div>
+                  <div className="font-semibold">СР</div>
+                  <div className="font-semibold">ЧТ</div>
+                  <div className="font-semibold">ПТ</div>
+                  <div className="font-semibold">СБ</div>
+                  <div className="font-semibold">ВС</div>
+                  {[...Array(2)].map((_, i) => <div key={`empty-${i}`}></div>)}
+                  {[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22].map(day => (
+                    <div key={day} className="py-1">{day}</div>
+                  ))}
+                  <div className="py-1 relative">
+                    <div>23</div>
+                    <Icon name="Heart" className="w-4 h-4 absolute top-0 left-1/2 -translate-x-1/2 fill-black" />
+                  </div>
+                  {[24,25,26,27,28,29,30,31].map(day => (
+                    <div key={day} className="py-1">{day}</div>
+                  ))}
                 </div>
-                {[24,25,26,27,28,29,30,31].map(day => (
-                  <div key={day} className="py-1">{day}</div>
-                ))}
               </div>
             </div>
-          </CardContent>
-        </Card>
+          </div>
 
-        <Card className="bg-brown text-cream border-0 rounded-3xl shadow-2xl">
-          <CardContent className="p-8">
+          <div className="bg-[#2a1f1a] text-[#f5ede4] rounded-3xl shadow-2xl p-8">
             <h2 className="font-cormorant text-3xl text-center mb-8 tracking-wider">TIMING OF THE DAY</h2>
             
             <div className="space-y-6">
@@ -129,7 +126,7 @@ const Index = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-xs mt-2 opacity-80">вас ждёт официальная торжественная<br/>церемония оригинального заключения проклятия</p>
+                <p className="text-xs mt-2 opacity-80">вас ждёт официальная торжественная<br/>церемония оригинального заключения брака</p>
               </div>
 
               <div>
@@ -147,11 +144,9 @@ const Index = () => {
                 <p className="text-xs mt-2 opacity-80">время вкусной еды, танцев и развлечений</p>
               </div>
             </div>
-          </CardContent>
-        </Card>
+          </div>
 
-        <Card className="bg-cream text-brown border-0 rounded-3xl shadow-2xl">
-          <CardContent className="p-8">
+          <div className="bg-[#f5ede4] text-black rounded-3xl shadow-2xl p-8">
             <h2 className="font-cormorant text-3xl text-center mb-6 tracking-wider">LOCATION</h2>
             
             <div className="relative h-48 rounded-2xl overflow-hidden mb-6">
@@ -171,15 +166,13 @@ const Index = () => {
             </p>
 
             <div className="flex justify-center">
-              <Button className="bg-brown text-cream hover:bg-brown/90 rounded-full px-8">
+              <Button className="bg-[#2a1f1a] text-[#f5ede4] hover:bg-[#2a1f1a]/90 rounded-full px-8">
                 Смотреть на карте
               </Button>
             </div>
-          </CardContent>
-        </Card>
+          </div>
 
-        <Card className="bg-cream text-brown border-0 rounded-3xl shadow-2xl">
-          <CardContent className="p-8">
+          <div className="bg-[#f5ede4] text-black rounded-3xl shadow-2xl p-8">
             <h2 className="font-cormorant text-3xl text-center mb-6 tracking-wider">DRESS CODE</h2>
             
             <p className="text-sm text-center mb-6">
@@ -190,10 +183,10 @@ const Index = () => {
             </p>
 
             <div className="flex justify-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-[#1a1612] border-2 border-brown"></div>
-              <div className="w-12 h-12 rounded-full bg-[#4a3426] border-2 border-brown"></div>
-              <div className="w-12 h-12 rounded-full bg-[#b8916f] border-2 border-brown"></div>
-              <div className="w-12 h-12 rounded-full bg-[#d4c4b0] border-2 border-brown"></div>
+              <div className="w-12 h-12 rounded-full bg-[#1a1612] border-2 border-black"></div>
+              <div className="w-12 h-12 rounded-full bg-[#4a3426] border-2 border-black"></div>
+              <div className="w-12 h-12 rounded-full bg-[#b8916f] border-2 border-black"></div>
+              <div className="w-12 h-12 rounded-full bg-[#d4c4b0] border-2 border-black"></div>
             </div>
 
             <p className="text-xs text-center mb-6 opacity-80">Вдохновляйтесь для вашего образа</p>
@@ -221,33 +214,29 @@ const Index = () => {
                 />
               </div>
             </div>
-          </CardContent>
-        </Card>
+          </div>
 
-        <Card className="bg-brown text-cream border-0 rounded-3xl shadow-2xl">
-          <CardContent className="p-8 text-center">
+          <div className="bg-[#2a1f1a] text-[#f5ede4] rounded-3xl shadow-2xl p-8 text-center">
             <h2 className="font-cormorant text-3xl mb-6 tracking-wider">TELEGRAM</h2>
             <p className="text-sm leading-relaxed mb-6">
               Для удобной координации и быстрой связи мы<br/>
               запустили наш ТГ канал И БОТ (будут также<br/>
-              доступны все фото, чтобы вы могли поделиться ими со всем,<br/>
+              доступны все фото, чтобы вы могли поделиться ими,<br/>
               и видео) с трансляцией и событиями
             </p>
-            <Button className="bg-cream text-brown hover:bg-cream/90 rounded-full px-8">
+            <Button className="bg-[#f5ede4] text-black hover:bg-[#f5ede4]/90 rounded-full px-8">
               Чат гостей
             </Button>
-          </CardContent>
-        </Card>
+          </div>
 
-        <Card className="bg-brown text-cream border-0 rounded-3xl shadow-2xl">
-          <CardContent className="p-8 text-center">
+          <div className="bg-[#2a1f1a] text-[#f5ede4] rounded-3xl shadow-2xl p-8 text-center">
             <h2 className="font-cormorant text-3xl mb-6 tracking-wider">CONTACTS</h2>
             <p className="text-sm mb-6">
               По всем вопросам и предложениям Вы всегда<br/>
               можете обратиться к нашему организатору
             </p>
             
-            <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-cream/20">
+            <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-[#f5ede4]/20">
               <img 
                 src="https://cdn.poehali.dev/projects/b38b88a5-07eb-4411-b8a7-b860fa8f20f7/files/e1f79def-4ca7-41fa-8e53-d5a01f50054a.jpg"
                 alt="Organizer"
@@ -256,26 +245,23 @@ const Index = () => {
             </div>
             
             <p className="text-lg mb-2">ЮЛИЯ</p>
-            <a href="tel:+79991234567" className="text-sm opacity-80 hover:opacity-100">
+            <a href="tel:+79993883633" className="text-sm opacity-80 hover:opacity-100">
               +7 (999) 388-36-33
             </a>
-          </CardContent>
-        </Card>
+          </div>
 
-        <Card className="bg-cream text-brown border-0 rounded-3xl shadow-2xl">
-          <CardContent className="p-8 text-center">
+          <div className="bg-[#f5ede4] text-black rounded-3xl shadow-2xl p-8 text-center md:col-span-2">
             <h2 className="font-cormorant text-3xl mb-6 tracking-wider">DETAILS</h2>
             
             <p className="text-sm leading-relaxed mb-6">
-              Ваше присутствие - само лучший подарок нам<br/>
-              необходимое счастье и возможность в этом числе<br/>
-              и провести лично у нас большое торжество!
+              Ваше присутствие - самый лучший подарок для нас<br/>
+              необходимое счастье и возможность провести<br/>
+              лично с вами большое торжество!
             </p>
 
             <p className="text-xs mb-6 opacity-80">
-              Просим не оформлять себе букеты цветы.<br/>
-              Выбор "подаренных" букетов будет присутствует, время<br/>
-              любых цветов!
+              Просим не оформлять себе букеты - цветы.<br/>
+              Выбор "подаренных" букетов будет присутствовать на торжестве
             </p>
 
             <p className="text-xs mb-8 opacity-80">
@@ -285,36 +271,36 @@ const Index = () => {
               • Если вас что-то интересует - спрашивайте
             </p>
 
-            <Button className="bg-brown text-cream hover:bg-brown/90 rounded-full px-8 mb-6">
+            <Button className="bg-[#2a1f1a] text-[#f5ede4] hover:bg-[#2a1f1a]/90 rounded-full px-8 mb-6">
               Ответить
             </Button>
 
-            <div className="border-t border-brown/20 pt-6">
+            <div className="border-t border-black/20 pt-6">
               <p className="text-xs mb-4 tracking-wider">Будем рады увидеться с Вами!</p>
               <p className="text-xs mb-4 opacity-80">До встречи остается:</p>
               
               <div className="grid grid-cols-4 gap-3 max-w-xs mx-auto">
                 <div>
                   <div className="text-xs opacity-60 mb-1">ДНЕЙ</div>
-                  <div className="bg-brown text-cream rounded-xl py-3 text-2xl font-light">
+                  <div className="bg-[#2a1f1a] text-[#f5ede4] rounded-xl py-3 text-2xl font-light">
                     {timeLeft.days.toString().padStart(2, '0')}
                   </div>
                 </div>
                 <div>
                   <div className="text-xs opacity-60 mb-1">ЧАСОВ</div>
-                  <div className="bg-brown text-cream rounded-xl py-3 text-2xl font-light">
+                  <div className="bg-[#2a1f1a] text-[#f5ede4] rounded-xl py-3 text-2xl font-light">
                     {timeLeft.hours.toString().padStart(2, '0')}
                   </div>
                 </div>
                 <div>
                   <div className="text-xs opacity-60 mb-1">МИНУТ</div>
-                  <div className="bg-brown text-cream rounded-xl py-3 text-2xl font-light">
+                  <div className="bg-[#2a1f1a] text-[#f5ede4] rounded-xl py-3 text-2xl font-light">
                     {timeLeft.minutes.toString().padStart(2, '0')}
                   </div>
                 </div>
                 <div>
                   <div className="text-xs opacity-60 mb-1">СЕКУНД</div>
-                  <div className="bg-brown text-cream rounded-xl py-3 text-2xl font-light">
+                  <div className="bg-[#2a1f1a] text-[#f5ede4] rounded-xl py-3 text-2xl font-light">
                     {timeLeft.seconds.toString().padStart(2, '0')}
                   </div>
                 </div>
@@ -328,9 +314,9 @@ const Index = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-          </CardContent>
-        </Card>
+          </div>
 
+        </div>
       </div>
     </div>
   );
